@@ -28,7 +28,7 @@ const DonutChart = () => {
         legend: {
             show: true
         }
-    }
+    };
 
     return (
         <Chart
