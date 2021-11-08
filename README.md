@@ -4,7 +4,7 @@ Workshop prático para construção de uma aplicação Full-Stack utilizando Rea
 
 [Acesso ao projeto.](https://sds5-lutz.netlify.app)
 
-Backend deployed on: **Heroku**
+Backend deployed on: **Heroku**  
 Frontend deployed on: **Netlify**
 
 > Caso os dados do dashboard não carreguem de primeira, pode ser que o back-end tenha tirado um cochilo 😴...  
