@@ -1,0 +1,20 @@
+server:
+    port: 8081
+spring:
+    datasource:
+        password: 1234567
+        url: jdbc:postgresql://localhost:5432/dsvendas?currentSchema=public
+        username: postgres
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                jdbc:
+                    lob:
+                        non_contextual_creation: true
+    sql:
+        init:
+            mode: always
+            platform: postgresql
