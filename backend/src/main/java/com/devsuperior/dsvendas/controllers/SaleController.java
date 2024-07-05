@@ -18,8 +18,12 @@ import java.util.List;
 @RequestMapping("/sales")
 public class SaleController {
 
+    private final SaleService saleService;
+
     @Autowired
-    private SaleService saleService;
+    public SaleController(SaleService saleService) {
+        this.saleService = saleService;
+    }
 
     @GetMapping
     public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable) {

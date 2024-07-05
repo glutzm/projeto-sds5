@@ -17,11 +17,15 @@ import java.util.List;
 @Service
 public class SaleService {
 
-    @Autowired
-    private SaleRepository saleRepository;
+    private final SaleRepository saleRepository;
+
+    private final SellerRepository sellerRepository;
 
     @Autowired
-    private SellerRepository sellerRepository;
+    public SaleService(SaleRepository saleRepository, SellerRepository sellerRepository) {
+        this.saleRepository = saleRepository;
+        this.sellerRepository = sellerRepository;
+    }
 
     @Transactional(readOnly = true)
     public Page<SaleDTO> findAll(Pageable pageable) {

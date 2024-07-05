@@ -14,8 +14,12 @@ import java.util.List;
 @RequestMapping("/sellers")
 public class SellerController {
 
+    private final SellerService sellerService;
+
     @Autowired
-    private SellerService sellerService;
+    public SellerController(SellerService sellerService) {
+        this.sellerService = sellerService;
+    }
 
     @GetMapping
     public ResponseEntity<List<SellerDTO>> findAll() {
